@@ -28,7 +28,7 @@ if(isset($_POST['signup'])){
 	   while($res=mysqli_fetch_array($code)){
 			$count++;
 	   }
-	   $company_code = "SB" . "$count" ;
+	   $company_code = "SB00" . "$count" ;
 
 	   $querry= "INSERT INTO `cmpany_admin_profile`( `cmp_admin_name`, `cmp_admin_email`, `cmp_admin_contact_number`, `cmp_code`, `cmp_name`, `cmp_admin_psw`) VALUES ('$fullname','$gmail','$phone','$company_code','$cmp_name','$hash_pass')";
 	   
@@ -55,6 +55,7 @@ if(isset($_POST['signup'])){
 
     		<h3 class="text-center">Create Account</h3>
 	    	<p class="text-center">Get started with your free account</p>
+
 	    	<!-- <button class="form-control text-center text-white bg-danger mb-3"><i class="fa fa-google bg-danger mr-2" aria-hidden="true"></i>Login via Gmail</button>
 	    	<button class="form-control text-center text-white bg-primary"><i class="fa fa-facebook bg-primary mr-2" aria-hidden="true"></i>Login via Facebook</button> -->
     	 
@@ -109,7 +110,7 @@ if(isset($_POST['signup'])){
 				    <div class="mt-3">
 				      <div class="input-group mb-2">
 				        <div class="input-group-prepend">
-				          <div class="input-group-text"><i class="fa fa-lock"></i></div>
+				          <div class="input-group-text"><i class="fa fa-lock "></i></div>
 				        </div>
 				        <input type="password" name="cnfrm_pass" class="form-control"  placeholder="Confirm Password" required>
 				      </div>

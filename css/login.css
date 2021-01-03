@@ -1,0 +1,17 @@
+.login-card{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ff6348;
+}
+
+.login-card .card{ height: 80%; width: 80%; }
+
+.login-form{ transform: translateY(50%); }
+
+.hidden{ display: none; }
+
+.login-btn{ background-color: #ff6348; color: #fff; }
+
+.login-btn:hover{ color: #fff; }

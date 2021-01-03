@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2021 at 03:02 PM
+-- Generation Time: Jan 03, 2021 at 08:34 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `cmpany_admin_profile` (
   `cmp_admin_id` int(11) NOT NULL,
   `cmp_admin_name` varchar(30) NOT NULL,
-  `cmp_admin_email` text NOT NULL,
+  `cmp_admin_email` varchar(50) NOT NULL,
   `cmp_admin_contact_number` bigint(10) NOT NULL,
   `cmp_code` varchar(11) NOT NULL,
   `cmp_name` text NOT NULL,
@@ -44,9 +44,7 @@ CREATE TABLE `cmpany_admin_profile` (
 --
 
 INSERT INTO `cmpany_admin_profile` (`cmp_admin_id`, `cmp_admin_name`, `cmp_admin_email`, `cmp_admin_contact_number`, `cmp_code`, `cmp_name`, `cmp_admin_psw`, `cmp_admin_profile_pic`) VALUES
-(1, 'Singh Savrabh Radhemohan', 'saucom99@gmail.com', 9044514273, '0', 'Dream Developer', '$2y$10$oNaNlxkQqRMcUpuXwveDxOc', ''),
-(3, 'Singh Savrabh Radhemohan', 'saucom99@gmail.com', 9044514273, 'SBSELECT CO', 'Dream Developer', '$2y$10$WeMw71Xt3YkhMJxsYVeSXev', ''),
-(4, 'Singh Savrabh Radhemohan', 'saucom99@gmail.com', 9044514273, 'SB2', 'Dream Developer', '$2y$10$ATDl6SLlCPTbq5BqLwbpQu9', '');
+(6, 'Singh Savrabh Radhemohan', 'saucom99@gmail.com', 9044514273, 'SB005', 'Dream Developer', '$2y$10$nPQjMfgOtGXHLjdLCCqpY.X', '');
 
 --
 -- Indexes for dumped tables
@@ -57,7 +55,8 @@ INSERT INTO `cmpany_admin_profile` (`cmp_admin_id`, `cmp_admin_name`, `cmp_admin
 --
 ALTER TABLE `cmpany_admin_profile`
   ADD PRIMARY KEY (`cmp_admin_id`),
-  ADD UNIQUE KEY `cmp_code` (`cmp_code`);
+  ADD UNIQUE KEY `cmp_code` (`cmp_code`),
+  ADD UNIQUE KEY `cmp_admin_email` (`cmp_admin_email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -67,7 +66,7 @@ ALTER TABLE `cmpany_admin_profile`
 -- AUTO_INCREMENT for table `cmpany_admin_profile`
 --
 ALTER TABLE `cmpany_admin_profile`
-  MODIFY `cmp_admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `cmp_admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

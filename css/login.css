@@ -1,17 +1,35 @@
-.login-card{
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	background-color: #F0F0F0;
+}
+
+.main_div{
 	height: 100vh;
+	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #ff6348;
 }
 
-.login-card .card{ height: 80%; width: 80%; }
+.sub_div{
+	width: 27%;
+}
 
-.login-form{ transform: translateY(50%); }
+div h3{
+	font-family: 'Lobster', cursive;
+}
 
-.hidden{ display: none; }
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
 
-.login-btn{ background-color: #ff6348; color: #fff; }
-
-.login-btn:hover{ color: #fff; }
+@media (max-width: 767px){
+	.sub_div{
+		width: auto;
+	}
+}
